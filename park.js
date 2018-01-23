@@ -3,8 +3,9 @@ const Park = function(name) {
   this.dinosaurs = [];
 }
 
-// ClassName.prototype.methodName = function () {
-//
-// };
+Park.prototype.addDino = function (dinosaur) {
+  this.dinosaurs.push(dinosaur);
+};
+
 
 module.exports = Park;
