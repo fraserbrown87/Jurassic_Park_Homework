@@ -1,14 +1,18 @@
 const Park = function(name) {
   this.name = name;
-  this.dinosaurs = [];
+  this.enclosure = [];
 }
 
 Park.prototype.addDino = function (dinosaur) {
-  this.dinosaurs.push(dinosaur);
+  this.enclosure.push(dinosaur);
 };
 
 Park.prototype.removeDino = function (dinosaur) {
-  this.dinosaurs.splice(dinosaur);
+  this.enclosure.splice(dinosaur);
+};
+
+Park.prototype.removeType = function (type) {
+
 };
 
 

@@ -21,14 +21,23 @@ describe ('Park', function(){
 
   it('can add dinosaur to enclosure', function(){
     park1.addDino(dinosaur1);
-    assert.strictEqual(1, park1.dinosaurs.length);
+    assert.strictEqual(park1.enclosure.length, 1);
   })
 
   it('can remove dinosaur from enclosure', function(){
     park1.addDino(dinosaur1);
-    assert.strictEqual(1, park1.dinosaurs.length);
+    assert.strictEqual(park1.enclosure.length, 1);
     park1.removeDino(dinosaur1);
-    assert.strictEqual(0, park1.dinosaurs.length);
+    assert.strictEqual(park1.enclosure.length, 0);
+  })
+
+  it('remove dino of same type', function(){
+    park1.addDino(dinosaur1);
+    park1.addDino(dinosaur2);
+    park1.addDino(dinosaur3);
+    assert.strictEqual(park1.enclosure.length, 3);
+    park1.removeType("Carnivore");
+    assert.strictEqual(park1.enclosure.length, 1);
   })
 
 
