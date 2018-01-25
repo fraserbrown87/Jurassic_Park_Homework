@@ -21,3 +21,5 @@ describe('Dinosaur', function(){
     assert.strictEqual(dinosaur.offspring, 2);
   })
 })
+
+module.exports = Dinosaur;
